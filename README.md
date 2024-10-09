@@ -60,7 +60,6 @@ image_rgb = cv2.cvtColor(image, cv2.COLOR_BGR2RGB)
 rows, cols, _ = image.shape
 M_translate = np.float32([[1, 0, 50], [0, 1, 100]])  
 translated_image = cv2.warpAffine(image_rgb, M_translate, (cols, rows))
-plt.subplot(2, 3, 2)
 plt.imshow(translated_image)
 plt.title("Translated Image")
 plt.axis('off')
@@ -73,7 +72,6 @@ import matplotlib.pyplot as plt
 image = cv2.imread('HappyFish.jpg')
 image_rgb = cv2.cvtColor(image, cv2.COLOR_BGR2RGB)
 scaled_image = cv2.resize(image_rgb, None, fx=1.5, fy=1.5, interpolation=cv2.INTER_LINEAR)
-plt.subplot(2, 3, 3)
 plt.imshow(scaled_image)
 plt.title("Scaled Image")
 plt.axis('off')
@@ -88,7 +86,6 @@ image = cv2.imread('HappyFish.jpg')
 image_rgb = cv2.cvtColor(image, cv2.COLOR_BGR2RGB)
 M_shear = np.float32([[1, 0.5, 0], [0.5, 1, 0]])  
 sheared_image = cv2.warpAffine(image_rgb, M_shear, (int(cols * 1.5), int(rows * 1.5)))
-plt.subplot(2, 3, 4)
 plt.imshow(sheared_image)
 plt.title("Sheared Image")
 plt.axis('off')
@@ -103,7 +100,6 @@ import matplotlib.pyplot as plt
 image = cv2.imread('HappyFish.jpg')
 image_rgb = cv2.cvtColor(image, cv2.COLOR_BGR2RGB)
 reflected_image = cv2.flip(image_rgb, 1)
-plt.subplot(2, 3, 5)
 plt.imshow(reflected_image)
 plt.title("Reflected Image")
 plt.axis('off')
@@ -117,7 +113,6 @@ image = cv2.imread('HappyFish.jpg')
 image_rgb = cv2.cvtColor(image, cv2.COLOR_BGR2RGB)
 M_rotate = cv2.getRotationMatrix2D((cols / 2, rows / 2), 45, 1)  
 rotated_image = cv2.warpAffine(image_rgb, M_rotate, (cols, rows))
-plt.subplot(2, 3, 6)
 plt.imshow(rotated_image)
 plt.title("Rotated Image")
 plt.axis('off')
@@ -142,22 +137,22 @@ plt.show()
 
 ## Output:
 ### Original Image
-![image](https://github.com/user-attachments/assets/714f3135-2695-473e-8020-0c7c82e8ea63)
+![image](https://github.com/user-attachments/assets/03421840-40b7-4961-b93f-79b11670ce55)
 
 ### i)Image Translation
-![image](https://github.com/user-attachments/assets/4e0b266e-383a-4219-8892-8513e89ef56c)
+![image](https://github.com/user-attachments/assets/be316218-3840-4ec0-9990-d275b189952d)
 
 ### ii) Image Scaling
-![image](https://github.com/user-attachments/assets/de47961d-1656-4cfd-b38c-596020a2eacb)
+![image](https://github.com/user-attachments/assets/b0bba58d-2ee7-4113-8191-0a5906603fb5)
 
 ### iii)Image shearing
-![image](https://github.com/user-attachments/assets/3de797e5-e87e-4632-802f-b1527b3e8d58)
+![image](https://github.com/user-attachments/assets/faed884d-3f41-4f8b-beb6-fad82d8be81d)
 
 ### iv)Image Reflection
-![image](https://github.com/user-attachments/assets/f1b73167-e381-42b1-ab23-671064468ade)
+![image](https://github.com/user-attachments/assets/2ae50244-9c87-4010-85d1-d1c66b870c7e)
 
 ### v)Image Rotation
-![image](https://github.com/user-attachments/assets/6b284f73-584d-4057-bfe3-0ed360573ff7)
+![image](https://github.com/user-attachments/assets/e19178ee-73bd-4ace-b2f6-9d02050c4992)
 
 ### vi)Image Cropping
 ![image](https://github.com/user-attachments/assets/3604b240-8815-429e-b92f-215047a44de7)
